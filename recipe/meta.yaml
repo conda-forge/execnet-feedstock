@@ -1,7 +1,6 @@
 {% set name = "execnet" %}
-{% set version = "1.7.1" %}
-{% set hash_type = "sha256" %}
-{% set hash = "cacb9df31c9680ec5f95553976c4da484d407e85e41c83cb812aa014f0eddc50" %}
+{% set version = "1.8.0" %}
+{% set hash = "b73c5565e517f24b62dea8a5ceac178c661c4309d3aa0c3e420856c072c411b4" %}
 
 package:
   name: {{ name }}
@@ -10,15 +9,15 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
-  build:
+  host:
     - pip
     - python
     - setuptools
