@@ -1,6 +1,6 @@
 {% set name = "execnet" %}
-{% set version = "2.1.0" %}
-{% set hash = "dc4a63f86afb40f8429f59f938d6cb97846f9e7cf7dd9eb4b8c26016965b7ac0" %}
+{% set version = "2.1.1" %}
+{% set hash = "5189b52c6121c24feae288166ab41b32549c7e2348652736540b9e6e7d4e72e3" %}
 
 package:
   name: {{ name }}
